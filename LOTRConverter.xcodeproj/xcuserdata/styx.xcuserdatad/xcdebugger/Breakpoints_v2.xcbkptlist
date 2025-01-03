@@ -14,38 +14,38 @@
             filePath = "LOTRConverter/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "ContentView"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "C11E3F9A-67BE-4932-A029-29C90856D98F - f7d60415d5a85bea"
+                  uuid = "C11E3F9A-67BE-4932-A029-29C90856D98F - cd3bbc98fd89aeb1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LOTRConverter.ContentView.init() -&gt; LOTRConverter.ContentView"
                   moduleName = "LOTRConverter.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/styx/Documents/Learning/IoSDev/AppProjects/LOTRConverter/%3Cstdin%3E"
+                  urlString = "file:///Users/styx/Documents/Learning/IoSDev/AppProjects/LOTRConverter/LOTRConverter/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24">
                </Location>
                <Location
-                  uuid = "C11E3F9A-67BE-4932-A029-29C90856D98F - 44cb9f1f355380d3"
+                  uuid = "C11E3F9A-67BE-4932-A029-29C90856D98F - 7624b5502fab0f10"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LOTRConverter.ContentView.init(showExchangeInfo: Swift.Bool, showSelectCurrency: Swift.Bool, leftCurrencyAmount: Swift.String, rightCurrencyAmount: Swift.String, leftCurrency: LOTRConverter.Currency, rightCurrency: LOTRConverter.Currency, leftTyping: SwiftUI.FocusState&lt;Swift.Bool&gt;, rightTyping: SwiftUI.FocusState&lt;Swift.Bool&gt;) -&gt; LOTRConverter.ContentView"
+                  symbolName = "LOTRConverter.ContentView.init(showExchangeInfo: Swift.Bool, showSelectCurrency: Swift.Bool, leftCurrencyAmount: Swift.String, rightCurrencyAmount: Swift.String, leftTyping: SwiftUI.FocusState&lt;Swift.Bool&gt;, rightTyping: SwiftUI.FocusState&lt;Swift.Bool&gt;, leftCurrency: LOTRConverter.Currency, rightCurrency: LOTRConverter.Currency) -&gt; LOTRConverter.ContentView"
                   moduleName = "LOTRConverter.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/styx/Documents/Learning/IoSDev/AppProjects/LOTRConverter/%3Cstdin%3E"
+                  urlString = "file:///Users/styx/Documents/Learning/IoSDev/AppProjects/LOTRConverter/LOTRConverter/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24">
                </Location>
             </Locations>
          </BreakpointContent>

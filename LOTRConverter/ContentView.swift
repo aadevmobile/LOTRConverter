@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ContentView: View {
     @State var showExchangeInfo = false
@@ -14,11 +15,15 @@ struct ContentView: View {
     @State var leftCurrencyAmount = ""
     @State var rightCurrencyAmount = ""
     
+    @FocusState var leftTyping
+    @FocusState var rightTyping
+    
     @State var leftCurrency: Currency = .silverPiece
     @State var rightCurrency: Currency = .goldPiece
     
-    @FocusState var leftTyping
-    @FocusState var rightTyping
+    let currencyTip = CurrencyTip()
+    
+    
     
     var body: some View {
         ZStack {
@@ -43,7 +48,7 @@ struct ContentView: View {
                 HStack {
                     // left conversion section
                     VStack {
-                        //lef currency
+                        //left currency
                         HStack {
                             //lef currency image
                             Image(leftCurrency.image)
@@ -60,8 +65,9 @@ struct ContentView: View {
                         .padding(.bottom, -5)
                         .onTapGesture {
                             showSelectCurrency.toggle()
-                        
-                        }
+                            currencyTip.invalidate (reason: .actionPerformed)
+                            }
+                        .popoverTip(currencyTip, arrowEdge: .bottom)
                         
                         //left currency text field
                         TextField("Amount", text: $leftCurrencyAmount)
@@ -104,11 +110,13 @@ struct ContentView: View {
                     }
                     .onTapGesture {
                         showSelectCurrency.toggle()
-                    }
+                        }
                 }
                 .padding()
                 .background(.black.opacity(0.5))
                 .clipShape(.capsule)
+                .keyboardType(.decimalPad)
+                
                 Spacer()
                 
                 //Info button
@@ -118,23 +126,22 @@ struct ContentView: View {
                     Button{
                         showExchangeInfo.toggle()
                         
-                    } label: {
-                        Image(systemName: "info.circle.fill")
-                            .font(.largeTitle)
-                            .foregroundStyle(.white)
-                    }
-                    .padding(.trailing)
+                        } label: {
+                            Image(systemName: "info.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundStyle(.white)
+                            }
+                            .padding(.trailing)
                     
                 }
                     
             }
-            
-            
-           
                 
         }
         //modifiers that impact the entire view
-        
+        .task {
+            try? Tips.configure()
+        }
         .onChange(of: leftCurrencyAmount) {
             if leftTyping { rightCurrencyAmount = leftCurrency.convert( leftCurrencyAmount, to:  rightCurrency)
             }
